@@ -4,13 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{{ meta.title }}</title>
-
-    <link rel="stylesheet" href="{{ '/assets/styles/main.css' | url }}">
+    <link href="{{ '/assets/styles/main.css' | url }}" rel="stylesheet">
     {% include "meta.njk" %}
 </head>
 <body>
     {% iconsprite %}
-    <a href="#main" class="sr-skip-link">skip to main content</a>
+    <a href="#main" class="hidden">skip to main content</a>
 
     <div class="layout" role="document">
         {% include "header.njk" %}

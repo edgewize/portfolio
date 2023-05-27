@@ -1,37 +1,14 @@
-<nav class="nav js-nav" role="navigation" tabindex="-1">
-
-    {# Menu Toggle Button #}
-    <button
-        class="nav__toggle js-nav-toggle"
-        aria-expanded="false"
-        aria-controls="nav-menu"
-    >
-        <span class="sr-only">toggle menu</span>
-        <span class="menuicon">
-            <span class="menuicon__bar"></span>
-            <span class="menuicon__bar"></span>
-            <span class="menuicon__bar"></span>
-            <span class="menuicon__bar"></span>
-        </span>
-    </button>
-
-    {# Nav Links  #}
-    <ul class="nav__menu js-nav-menu" id="nav-menu">
-    {%- for item in collections.all | eleventyNavigation -%}
+  <div class="w-full block flex-grow lg:flex lg:items-center lg:w-auto">
+        {%- for item in collections.all | eleventyNavigation -%}
         {%- if item.url -%}
             {%- set isCurrent = (item.url == page.url) -%}
             {%- set isParent = item.url != '/' and item.url in page.url -%}
-            <li class="nav__item{% if isCurrent or isParent %} nav__item--active{% endif %}">
-                <a
-                    class="nav__link"
-                    href="{% if isCurrent %}#main{% else %}{{ item.url | url }}{% endif %}"
-                    {% if isCurrent %}aria-current="page"{% endif %}
-                >
+            <a 
+                href="{% if isCurrent %}#main{% else %}{{ item.url | url }}{% endif %}" 
+                class="block mt-4 lg:inline-block lg:mt-0 text-teal-200 hover:text-white mr-4 {% if isCurrent or isParent %}underline{% endif %}" 
+                {% if isCurrent %}aria-current="page"{% endif %}>
                     {{ item.title }}
                 </a>
-            </li>
         {%- endif -%}
     {%- endfor -%}
-    </ul>
-
-</nav>
+  </div>
