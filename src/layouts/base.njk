@@ -1,29 +1,39 @@
 <!DOCTYPE html>
 <html lang="{{ meta.lang }}">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{{ meta.title }}</title>
-    <link href="{{ '/assets/styles/main.css' | url }}" rel="stylesheet">
-    {% include "meta.njk" %}
-</head>
-<body>
-    {% iconsprite %}
-    <a href="#main" class="hidden">skip to main content</a>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>
+            {% if title %}
+            {{ title }}
+            {% else %}
+            {{ meta.title }}
+            {% endif %}
+        </title>
+        <link href="{{ '/assets/styles/main.css' | url }}" rel="stylesheet" />
+        {% include "meta.njk" %}
+    </head>
+    <body class="flex flex-col min-h-screen">
+        {% iconsprite %}
+        <a href="#main" class="hidden">skip to main content</a>
+        <header>{% include "header.njk" %}</header>
 
-    <div class="layout" role="document">
-        {% include "header.njk" %}
-        <main id="main" class="main" tabindex="-1">
+        <main id="main" class="flex-grow" tabindex="-1">
             {{ content | safe }}
         </main>
-        {% include "footer.njk" %}
-    </div>
 
-    <script type="text/javascript" src="{{ '/assets/scripts/main.js' | url }}"></script>
-    <script type="text/javascript">
-        if ('serviceWorker' in navigator) {
-            navigator.serviceWorker.register('/serviceworker.js')
-        }
-    </script>
-</body>
+        <footer class="bg-gray-800 w-full text-white text-center p-4">
+            {% include "footer.njk" %}
+        </footer>
+
+        <script
+            type="text/javascript"
+            src="{{ '/assets/scripts/main.js' | url }}"
+        ></script>
+        <script type="text/javascript">
+            if ('serviceWorker' in navigator) {
+                navigator.serviceWorker.register('/serviceworker.js')
+            }
+        </script>
+    </body>
 </html>
