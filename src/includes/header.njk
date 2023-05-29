@@ -1,1 +1,3 @@
-<nav class="bg-{{ site.color.darker }} p-6">{% include "navigation.njk" %}</nav>
+<nav class="bg-{{ site.color.darker | safe }} p-6">
+    {% include "navigation.njk" %}
+</nav>

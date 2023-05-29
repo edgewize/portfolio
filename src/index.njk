@@ -60,18 +60,20 @@ eleventyNavigation:
                         </p>
                     </div>
                     <div class="flex items-center">
-                        <a href="/contact">
+                        <a href="{{ site.mccontact }}">
                             <button
-                                class="bg-green-600 hover:bg-green-800 text-green-100 font-semibold py-2 px-4 border border-gray-400 rounded shadow"
+                                class="flex items-center bg-{{
+                                    site.color.primary
+                                }} hover:bg-green-900 hover:bg-{{
+                                    site.color.darker
+                                }} text-white font-semibold py-2 px-4 border border-gray-400 rounded shadow"
                             >
-                                <p>Contact Me</p>
+                                <span class="mr-1"
+                                    >{% include "icons/email.svg" %}</span
+                                >
+                                Join Mailing List
                             </button>
                         </a>
-                        <button
-                            class="flex items-center bg-emerald-400 hover:bg-emerald-500 text-white font-semibold py-2 px-4 border border-gray-400 rounded shadow"
-                        >
-                            {% include "icons/email.svg" %} Button Text
-                        </button>
                     </div>
                 </div>
             </div>
