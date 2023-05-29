@@ -6,10 +6,10 @@ eleventyNavigation:
     order: 1
 ---
 
-<section class="bg-{{ site.color.background }}">
+<section class="bg-white">
     <div class="mt-10 flex w-full justify-center items-center">
         <img
-            class="outline rounded-full outline-{{ site.color.darkNeutral }}"
+            class="outline rounded-full outline-gray-800"
             src="{{
                 site.imgcdn
             }}/taylor-edginton-headshot.png?format=auto&h=200&w=200&fit=crop&crop=focalpoint&fp-z=1.5&fp-x=.5&fp-y=.3&mask=ellipse"
@@ -29,7 +29,7 @@ eleventyNavigation:
     >
         Taylor Edginton
     </h1>
-    <p class="mt-4 text-lg text-center font-bold text-{{ site.color.darker }}">
+    <p class="mt-4 text-lg text-center font-bold text-green-900">
         Marketing Leader | Software Developer
     </p>
     <div class="flex justify-center p-10">
@@ -62,11 +62,7 @@ eleventyNavigation:
                     <div class="flex items-center">
                         <a href="{{ site.mccontact }}">
                             <button
-                                class="flex items-center bg-{{
-                                    site.color.primary
-                                }} hover:bg-green-900 hover:bg-{{
-                                    site.color.darker
-                                }} text-white font-semibold py-2 px-4 border border-gray-400 rounded shadow"
+                                class="flex items-center bg-green-700 hover:bg-green-900 text-white font-semibold py-2 px-4 border border-gray-400 rounded shadow"
                             >
                                 <span class="mr-1"
                                     >{% include "icons/email.svg" %}</span
