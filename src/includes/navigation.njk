@@ -1,14 +1,23 @@
-  <div class="w-full block flex-grow lg:flex lg:items-center lg:w-auto">
-        {%- for item in collections.all | eleventyNavigation -%}
-        {%- if item.url -%}
-            {%- set isCurrent = (item.url == page.url) -%}
-            {%- set isParent = item.url != '/' and item.url in page.url -%}
-            <a 
-                href="{% if isCurrent %}#main{% else %}{{ item.url | url }}{% endif %}" 
-                class="block mt-4 lg:inline-block lg:mt-0 text-teal-200 hover:text-white mr-4 {% if isCurrent or isParent %}underline{% endif %}" 
-                {% if isCurrent %}aria-current="page"{% endif %}>
-                    {{ item.title }}
-                </a>
-        {%- endif -%}
-    {%- endfor -%}
-  </div>
+<div class="flex justify-center">
+    {%- for item in collections.all | eleventyNavigation -%} {%- if item.url -%}
+    {%- set isCurrent = (item.url == page.url) -%} {%- set isParent = item.url
+    != '/' and item.url in page.url -%}
+    <a
+        href="{% if isCurrent %}#main{% else %}{{ item.url | url }}{% endif %}"
+        class="block mt-4 lg:inline-block lg:mt-0 text-{{
+            site.color.lighter
+        }} hover:text-{{
+            site.color.accent
+        }} mr-4 {% if isCurrent or isParent %}underline font-bold{% endif %}"
+        {%
+        if
+        isCurrent
+        %}aria-current="page"
+        {%
+        endif
+        %}
+    >
+        {{ item.title }}
+    </a>
+    {%- endif -%} {%- endfor -%}
+</div>

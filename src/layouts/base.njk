@@ -5,13 +5,26 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>
             {% if title %}
-            {{ title }}
+            {{ title }} | {{ meta.title }}
             {% else %}
             {{ meta.title }}
             {% endif %}
         </title>
         <link href="{{ '/assets/styles/main.css' | url }}" rel="stylesheet" />
         {% include "meta.njk" %}
+        <script id="mcjs">
+            !(function (c, h, i, m, p) {
+                ;(m = c.createElement(h)),
+                    (p = c.getElementsByTagName(h)[0]),
+                    (m.async = 1),
+                    (m.src = i),
+                    p.parentNode.insertBefore(m, p)
+            })(
+                document,
+                'script',
+                'https://chimpstatic.com/mcjs-connected/js/users/386780ea29ed145c2726a5438/5dbf677a207ec4a89b124d7ab.js'
+            )
+        </script>
     </head>
     <body class="flex flex-col min-h-screen">
         {% iconsprite %}
