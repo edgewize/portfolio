@@ -1,15 +1,4 @@
 {
     "imgcdn": "https://edgewize.imgix.net/images",
-    "mccontact": "https://us21.list-manage.com/contact-form?u=386780ea29ed145c2726a5438&form_id=ab45f3aa65dd38077a61bf158db0c9e8",
-    "color": {
-        "primary": "green-700",
-        "lighter": "green-300",
-        "darker": "green-900",
-        "secondary": "indigo-500",
-        "accent": "red-500",
-        "warning": "yellow-500",
-        "lightNeutral": "gray-300",
-        "darkNeutral": "gray-800",
-        "background": "white"
-    }
+    "mccontact": "https://us21.list-manage.com/contact-form?u=386780ea29ed145c2726a5438&form_id=ab45f3aa65dd38077a61bf158db0c9e8"
 }
