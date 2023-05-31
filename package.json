@@ -10,8 +10,8 @@
         "build": "run-s clean build:css prod:eleventy --print-label",
         "dev:eleventy": "cross-env ELEVENTY_ENV=development eleventy --serve",
         "prod:eleventy": "cross-env ELEVENTY_ENV=production eleventy",
-        "dev:css": "tailwindcss -i src/assets/styles/main.css -o dist/assets/styles/main.css --watch --postcss",
-        "build:css": "tailwindcss -i src/assets/styles/main.css -o dist/assets/styles/main.css --postcss",
+        "dev:css": "postcss src/assets/styles/main.css -o dist/assets/styles/main.css --verbose --watch",
+        "build:css": "postcss src/assets/styles/main.css -o dist/assets/styles/main.css",
         "clean": "del-cli dist",
         "test": "echo \"Error: no test specified\" && exit 1"
     },
@@ -43,7 +43,14 @@
         "sass": "^1.62.1",
         "sass-loader": "^13.3.0",
         "svg-sprite": "^1.5.0",
-        "webpack": "^5.28.0"
+        "webpack": "^5.28.0",
+        "@tailwindcss/aspect-ratio": "^0.4.0",
+        "@tailwindcss/forms": "^0.4.0",
+        "@tailwindcss/typography": "^0.5.2",
+        "browser-sync": "^2.27.7",
+        "concurrently": "^7.0.0",
+        "cssnano": "^5.0.17",
+        "postcss-cli": "^9.1.0"
     },
     "devDependencies": {
         "@11ty/eleventy": "^2.0.1",

@@ -1,4 +1,24 @@
 {
     "imgcdn": "https://edgewize.imgix.net/images",
-    "mccontact": "https://us21.list-manage.com/contact-form?u=386780ea29ed145c2726a5438&form_id=ab45f3aa65dd38077a61bf158db0c9e8"
+    "mccontact": "https://us21.list-manage.com/contact-form?u=386780ea29ed145c2726a5438&form_id=ab45f3aa65dd38077a61bf158db0c9e8",
+    "social": {
+        "linkedin": "https://www.linkedin.com/in/taylor-edginton-1019a824",
+        "instagram": "https://www.instagram.com/taylor_edginton/",
+        "facebook": "https://www.facebook.com/taylor.edginton/",
+        "twitter": "https://twitter.com/edgewize_"
+    },
+    "skills": {
+        "87": "Coaching",
+        "96": "Marketing Strategy",
+        "81": "Project Management",
+        "91": "Web Development"
+    },
+    "services": {
+        "Coaching": "Help individuals find the magic inside themselves",
+        "Product-Market-Fit": "Validate demand for new products and services.",
+        "Web_Development": "Create websites with HTML, CSS, JS, PHP|Python.",
+        "Culture": "Help teams thrive while doing their best work.",
+        "Lead_Generation": "Connect potential customers with solutions.",
+        "Data_Analytics": "Visualize performance in accessible dashboards."
+    }
 }
