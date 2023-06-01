@@ -1,7 +1,19 @@
 ---
 layout: base
 ---
-<article class="container">
-    <h1>{{ title }}</h1>
-    {{ content | safe }}
+<article class="container pt-10">
+    <div class="grid grid-cols-1 md:grid-cols-2">
+        <div>
+            <img
+                alt="{{description}}"
+                src="{{image}}?format=auto&w=752&h=381&fit=crop&crop=focalpoint&fp-x=.5&fp-y=0&fp-z=1.2"
+                srcset="{{image}}?format=auto&w=752&h=381&fit=crop&crop=focalpoint&fp-x=.5&fp-y=0&fp-z=1.2,
+                {{image}}?format=auto&w=752&h=381&fit=crop&crop=focalpoint&fp-x=.5&fp-y=0&fp-z=1.2&dpr=2 2x,
+                {{image}}?format=auto&w=752&h=381&fit=crop&crop=focalpoint&fp-x=.5&fp-y=0&fp-z=1.2&dpr=3 3x"
+                class="w-full shadow mb-4"
+            >
+            <h1 class="font-header color-primary text-4xl mb-4">{{ title }}</h1>
+            {{ content | safe }}
+        </div>
+    </div>
 </article>

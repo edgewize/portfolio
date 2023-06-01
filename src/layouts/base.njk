@@ -1,32 +1,32 @@
 <!DOCTYPE html>
 <html lang="{{ meta.lang }}">
     <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta charset="UTF-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
         <title>
             {% if title %}
-            {{ title }} | {{ meta.title }}
+                {{ title }} | {{ meta.title }}
             {% else %}
-            {{ meta.title }}
+                {{ meta.title }}
             {% endif %}
         </title>
         <link
             as="style"
             href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&family=Raleway:wght@400;500;600;700&display=swap"
             rel="preload"
-        />
+/>
 
         <link
             href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&family=Raleway:wght@400;500;600;700&display=swap"
             rel="stylesheet"
-        />
+/>
 
         <link
             href="https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css"
             rel="stylesheet"
-        />
+/>
 
-        <link href="{{ '/assets/styles/main.css' | url }}" rel="stylesheet" />
+        <link href="{{ '/assets/styles/main.css' | url }}" rel="stylesheet"/>
         {% include "meta.njk" %}
     </head>
     <body class="flex flex-col min-h-screen">
@@ -38,7 +38,7 @@
             {{ content | safe }}
         </main>
 
-        <footer class="bg-gray-800 w-full text-white text-center p-4">
+        <footer class="bg-primary w-full text-white mt-10">
             {% include "footer.njk" %}
         </footer>
 
@@ -46,10 +46,5 @@
             type="text/javascript"
             src="{{ '/assets/scripts/main.js' | url }}"
         ></script>
-        <script type="text/javascript">
-            if ('serviceWorker' in navigator) {
-                navigator.serviceWorker.register('/serviceworker.js')
-            }
-        </script>
     </body>
 </html>
