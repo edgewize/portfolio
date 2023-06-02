@@ -1,21 +1,27 @@
 ---
 layout: base
 ---
+{% import "macros.njk" as macros %}
 <article class="container font-body leading-relaxed text-grey-800 pt-10">
-    <div class="flex flex-col space-y-6 w-1/2 mx-auto">
-        <div>
-            <img
-                alt="{{description}}"
-                src="{{image}}?format=auto&w=752&h=381&fit=crop&crop=focalpoint&fp-x=.5&fp-y=0&fp-z=1.2"
-                srcset="{{image}}?format=auto&w=752&h=381&fit=crop&crop=focalpoint&fp-x=.5&fp-y=0&fp-z=1.2,
-                {{image}}?format=auto&w=752&h=381&fit=crop&crop=focalpoint&fp-x=.5&fp-y=0&fp-z=1.2&dpr=2 2x,
-                {{image}}?format=auto&w=752&h=381&fit=crop&crop=focalpoint&fp-x=.5&fp-y=0&fp-z=1.2&dpr=3 3x"
-                class="w-full shadow mb-4"
-            >
+    <div class="grid place-items-center">
+        <div class="w-2/2 md:w-1/2">
+            <div class="flex flex-col space-y-6">
+                <div class="">
+                    <img
+                        width="723"
+                        height="371"
+                        alt="{{description}}"
+                        src="{{image}}"
+                        srcset="{{image}},
+                        {{image}}&dpr=2 2x,
+                        {{image}}&dpr=3 3x"
+                        class="w-full shadow"/>
+                </div>
+                <h1 class="font-header text-4xl font-semibold uppercase text-primary sm:text-5xl lg:text-6xl">
+                    {{ title }}
+                </h1>
+                {{ content | safe }}
+            </div>
         </div>
-        <h1 class="font-header text-4xl font-semibold uppercase text-primary sm:text-5xl lg:text-6xl">
-            {{ title }}
-        </h1>
-        {{ content | safe }}
     </div>
 </article>

@@ -1,3 +1,4 @@
+{% import "macros.njk" as macros %}
 <div class="container py-16 md:py-20" id="portfolio">
     <h2
         class="text-center font-header text-4xl font-semibold uppercase text-primary sm:text-5xl lg:text-6xl"
@@ -14,20 +15,17 @@
     >
         {% for page in collections.portfolio %}
             <a
-            href="{{page.url}}"
-            class="mx-auto transform transition-all hover:scale-105 md:mx-0"
-        >
+                href="{{page.url}}"
+                class="mx-auto transform transition-all hover:scale-105 md:mx-0">
                 <img
-                width="723"
-                height="371"
-                alt="{{page.data.description}}"
-                src="{{page.data.image}}?format=auto&w=723&h=371&fit=crop&crop=focalpoint&fp-x=.5&fp-y=0&fp-z=1.2"
-                srcset="{{page.data.image}}?format=auto&w=723&h=371&fit=crop&crop=focalpoint&fp-x=.5&fp-y=0&fp-z=1.2,
-                {{page.data.image}}?format=auto&w=723&h=371&fit=crop&crop=focalpoint&fp-x=.5&fp-y=0&fp-z=1.2&dpr=2 2x,
-                {{page.data.image}}?format=auto&w=723&h=371&fit=crop&crop=focalpoint&fp-x=.5&fp-y=0&fp-z=1.2&dpr=3 3x"
-                class="w-full shadow"
-                alt="portfolio image"
-/>
+                    width="723"
+                    height="371"
+                    alt="{{page.data.description}}"
+                    src="{{page.data.image}}"
+                    srcset="{{page.data.image}},
+                    {{page.data.image}}&dpr=2 2x,
+                    {{page.data.image}}&dpr=3 3x"
+                    class="w-full shadow"/>
             </a>
         {% endfor %}
     </div>
