@@ -1,5 +1,8 @@
 node_modules
 dist
+env
 atom-v2.0.0
+resume.md
 .env
 .vscode
+.nvmrc

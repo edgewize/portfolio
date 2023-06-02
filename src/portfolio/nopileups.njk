@@ -7,11 +7,16 @@ tags:
     - portfolio
 ---
 
-<section class="mb-2">
+{% import "macros.njk" as macros %}
+<p class="text-bold">
+    May 2017 to April 2018
+</p>
+<p>
     NoPileups</a> is a car wash anti-collision service. 
-    It uses computer vision to stop the conveyor before accidents happen. The startup was acquired by <a href="https://drb.com/tunnel_solutions/tunnel_management/nopileups_full_tunnel_optimization" class="text-primary hover:text-yellow">DRB Systems</a> in 2018.
-</section>
-<section class="flex flex-col md:flex-row space-x-4 text-center mb-4">
+    It uses computer vision to stop the conveyor before accidents happen. 
+    The startup was acquired by <a href="https://drb.com/tunnel_solutions/tunnel_management/nopileups_full_tunnel_optimization" class="text-primary hover:text-yellow">DRB Systems</a> in 2018.
+</p>
+<div class="flex flex-col md:flex-row space-x-4 text-center mb-4">
 <div>
     <img
             width="600"
@@ -29,46 +34,62 @@ tags:
             alt="Example of NoPileups Stop"
             src="{{site.imgcdn}}/nopileups/good-stop.gif" >
     <p>
-            With NoPileups
+                With NoPileups
+            </p>
+</div>
+</div>
+<p>
+    This was the situation when I was hired. 
+</p>
+<ul class="list-inside list-disc">
+<li>
+        Running in a dozen car washes.
+    </li>
+<li>
+        Customers pay $500 per site per month.
+    </li>
+<li>
+        Majority of business acquired though a strategic partner's network.
+    </li>
+<li>
+        Target audience is unsure about high-tech and subscription services.
+    </li>
+</ul>
+<p>
+    The mission was increasing the number of car washes running the service.
+</p>
+<p>
+    I developed a customer acquisition strategy and lead a team of seven sales, creative, &amp; implementation people to achieve these results. 
+</p>
+<ul class="list-inside list-disc">
+<li>
+        Generated leads for 3 out of 5 car washes in the target audience.
+    </li>
+<li>
+        Added $50,000 in monthly recurring revenue - about 100 new car washes.
+    </li>
+<li>
+        Awarded small business of the your by Boise Chamber of Commerce.
+    </li>
+</ul>
+
+<div>
+{{ macros.responsiveImg(site.imgcdn+"/nopileups/npu-team.jpg", 752, 381, "NoPileups team", imgix_args="&fit=crop&crop=middle") }}
+<p class="text-center">
+        A few members hard at work.
+    </p>
+</div>
+<div class="flex flex-row space-x-4">
+<div>
+    {{ macros.responsiveImg(site.imgcdn+"/nopileups/print-ad.png", 752, 381, "Email banner") }}
+    <p class="text-center">
+            Print ad featured in Autolaundry News
         </p>
 </div>
-</section>
-<section>
-<p>
-        This was the situation when I started on the project. 
-    </p>
-<ul class="list-inside list-disc mb-4">
-    <li>
-            Running in a dozen car washes.
-        </li>
-    <li>
-                Customers pay $500 per site per month.
-        </li>
-    <li>
-                Majority of business acquired though a strategic partner’s network.
-        </li>
-    <li>
-                Target audience is unsure about high-tech and subscription services.
-        </li>
-</ul>
-<p class="mb-2">
-    The mission was rapid growth with acquisition in the next 1-2 years.  
-    </p>
-<p class="mb-2">
-    I was hired to accelerate the number of car washes coming online each month and viewed this as a chasm crossing challenge. <a href="text-primary hover:text-yellow">Crossing the Chasm</a> outlines a strategy for selling technology products to mainstream customers. 
-    </p>
-<p>
-        Selling mainstream car wash operators required:
-</p>
-<ul class="list-inside list-disc mb-4">
-    <li>
-A compelling value proposition.
-    </li>
-    <li>
-  Increased awareness in the target market.      
-    </li>
-    <li>
-  Proof of operators gaining positive ROI.      
-    </li>
-</ul>
-</section>
+<div>
+    {{ macros.responsiveImg(site.imgcdn+"/nopileups/direct-mailer.png", 752, 381, "Email banner") }}
+    <p class="text-center">
+            Direct mailer
+        </p>
+</div>
+</div>

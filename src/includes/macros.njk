@@ -1,9 +1,22 @@
 {% macro iconButton(icon_path, button_copy) %}
-<a
+    <a
     href="#"
     class="inline-flex justify-center items-center py-3 px-5 text-base font-medium text-center text-gray-900 rounded-lg border border-gray-300 hover:bg-gray-100 focus:ring-4 focus:ring-gray-100 dark:text-white dark:border-gray-700 dark:hover:bg-gray-700 dark:focus:ring-gray-800"
 >
-    {% include "{{ icon_path }}" %}
-    {{ button_copy }}
-</a>
+        {% include "{{ icon_path }}" %}
+        {{ button_copy }}
+    </a>
+{% endmacro %}
+
+{% macro responsiveImg(src, w, h, alt, imgix_args = "") %}
+    {% set base_url = src + "?auto=format&w=" + w + "&h=" + h + imgix_args %}
+    <img
+        width="{{w}}"
+        height="{{h}}"
+        alt="{{alt}}"
+        src="{{base_url}}" 
+        srcset="{{base_url}},
+        {{base_url}}&dpr=2 2x,
+        {{base_url}}&dpr3 3x"
+    >
 {% endmacro %}

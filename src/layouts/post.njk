@@ -1,8 +1,8 @@
 ---
 layout: base
 ---
-<article class="container pt-10">
-    <div class="grid grid-cols-1 md:grid-cols-2">
+<article class="container font-body leading-relaxed text-grey-800 pt-10">
+    <div class="flex flex-col space-y-6 w-1/2 mx-auto">
         <div>
             <img
                 alt="{{description}}"
@@ -12,8 +12,10 @@ layout: base
                 {{image}}?format=auto&w=752&h=381&fit=crop&crop=focalpoint&fp-x=.5&fp-y=0&fp-z=1.2&dpr=3 3x"
                 class="w-full shadow mb-4"
             >
-            <h1 class="font-header color-primary text-4xl mb-4">{{ title }}</h1>
-            {{ content | safe }}
         </div>
+        <h1 class="font-header text-4xl font-semibold uppercase text-primary sm:text-5xl lg:text-6xl">
+            {{ title }}
+        </h1>
+        {{ content | safe }}
     </div>
 </article>
