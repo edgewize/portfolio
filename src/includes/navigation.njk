@@ -1,7 +1,8 @@
 {% macro navLink(url, text) %}
     <a
         href="{{url}}"
-        class="block mt-4 lg:inline-block lg:mt-0 hover:text-yellow mr-4 {% if isCurrent or isParent %}underline font-bold{% endif %}">
+        class="block mt-4 lg:inline-block lg:mt-0 text-white hover:text-yellow mr-4 {% if isCurrent or isParent %}underline font-bold{% endif %}"
+        {% if isCurrent %}aria-current="page" {% endif %}>
         {{text}}
     </a>
 {% endmacro %}
@@ -10,16 +11,16 @@
         {%- if item.url -%}
             {%- set isCurrent = (item.url == page.url) -%}
             {%- set isParent = item.url != '/' and item.url in page.url -%}
-            <a 
-                href="{% if isCurrent %}#main{% else %}{{ item.url | url }}{% endif %}" 
-                class="block mt-4 lg:inline-block lg:mt-0 hover:text-yellow mr-4 {% if isCurrent or isParent %}underline font-bold{% endif %}"
-                {% if isCurrent %}aria-current="page" {% endif %}
-            >
-                {{ item.title }}
-            </a>
+            {% if isCurrent %}
+                {% set url = "#main" %}
+            {% else %}
+                {% set url = item.url %}
+            {% endif %}
+            {{ navLink(url, item.title) }}
         {%- endif -%}
     {%- endfor -%}
     {{ navLink("/#portfolio", "Portfolio")}}
+    {{ navLink("/#resume", "Resume")}}
     {{navLink("https://us21.list-manage.com/contact-form?u=386780ea29ed145c2726a5438&form_id=ab45f3aa65dd38077a61bf158db0c9e8", "Contact")}}
 
 </div>

@@ -15,7 +15,7 @@
             </h4>
             <p class="pt-6 font-body leading-relaxed text-grey-20">
                 Marketing leader and sofware developer in Boise, Idaho.
-                Experienced in startups and scaling B2B SaaS. Open to contract
+                Experienced in startups and scaling B2B SaaS. Pretty good at a lot of stuff. Open to contract
                 and full-time opportunities.
             </p>
             <div
@@ -38,35 +38,35 @@
                 >
                     {% for platform, url in site.social %}
 
-                    <a href="{{ url }}">
-                        <i
+                        <a href="{{ url }}">
+                            <i
                             class="bx bxl-{{
                                 platform
                             }}{% if platform in ['linkedin', 'facebook'] %}-square{% endif %} {% if not loop.first %}pl-4{% endif %} text-2xl text-primary hover:text-yellow"
                         ></i>
-                    </a>
+                        </a>
                     {% endfor %}
                 </div>
             </div>
         </div>
         <div class="w-full pl-0 pt-10 sm:w-3/4 lg:w-2/5 lg:pl-12 lg:pt-0">
             {% for years, skill in site.skills %}
-            <div class="{% if not loop.first %}pt-6{%endif%}">
-                <div class="flex items-end justify-between">
-                    <h4 class="font-body font-semibold uppercase text-black">
-                        {{ skill }}
-                    </h4>
-                    <h3 class="font-body text-3xl font-bold text-primary">
-                        {{ years }} years
+                <div class="{% if not loop.first %}pt-6{%endif%}">
+                    <div class="flex items-end justify-between">
+                        <h4 class="font-body font-semibold uppercase text-black">
+                            {{ skill }}
+                        </h4>
+                        <h3 class="font-body text-3xl font-bold text-primary">
+                            {{ years }} years
                     </h3>
-                </div>
-                <div class="mt-2 h-3 w-full rounded-full bg-lila">
-                    <div
+                    </div>
+                    <div class="mt-2 h-3 w-full rounded-full bg-lila">
+                        <div
                         class="h-3 rounded-full bg-primary"
                         style="width: {{ (years / 12) * 100 }}%"
                     ></div>
+                    </div>
                 </div>
-            </div>
             {% endfor %}
         </div>
     </div>

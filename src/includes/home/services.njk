@@ -14,34 +14,32 @@
         class="grid grid-cols-1 gap-6 pt-10 sm:grid-cols-2 md:gap-10 md:pt-12 lg:grid-cols-3"
     >
         {% for service, desc in site.services %}
-        <div class="group rounded px-8 py-12 shadow hover:bg-primary">
-            <!-- <div class="mx-auto h-24 w-24 text-center xl:h-28 xl:w-28">
-                <div class="hidden group-hover:block">
-                    <img
-                        src="/assets/img/icon-development-white.svg"
-                        alt="development icon"
-                    />
+            <div class="group rounded px-8 py-12 shadow hover:bg-primary">
+                <div class="mx-auto h-24 w-24 text-center xl:h-28 xl:w-28">
+                    <div class="hidden group-hover:block">
+                        <img
+                        src="/assets/images/icons/{{service | replace("_", "-") | lower}}.svg"
+                        alt="{{service}} icon"/>
+                    </div>
+                    <div class="block group-hover:hidden">
+                        <img
+                        src="/assets/images/icons/{{service | replace("_", "-") | lower}}.svg"
+                        alt="{{service}} icon"/>
+                    </div>
                 </div>
-                <div class="block group-hover:hidden">
-                    <img
-                        src="/assets/img/icon-development-black.svg"
-                        alt="development icon"
-                    />
-                </div>
-            </div> -->
-            <div class="text-center">
-                <h3
+                <div class="text-center">
+                    <h3
                     class="pt-8 text-lg font-semibold uppercase text-primary group-hover:text-yellow lg:text-xl"
                 >
-                    {{ service  | replace("_", " ") | upper }}
-                </h3>
-                <p
+                        {{ service  | replace("_", " ") | upper }}
+                    </h3>
+                    <p
                     class="text-grey pt-4 text-sm group-hover:text-white md:text-base"
                 >
-                    {{ desc }}
-                </p>
+                        {{ desc }}
+                    </p>
+                </div>
             </div>
-        </div>
         {% endfor %}
     </div>
 </section>

@@ -5,4 +5,13 @@ html {
     @apply font-body antialiased;
 }
 
+a {
+    @apply text-primary;
+    @apply font-semibold;
+}
+
+a:hover {
+    @apply text-yellow;
+}
+
 @tailwind utilities;

@@ -20,5 +20,37 @@
         "Culture": "Help teams thrive while doing their best work.",
         "Lead_Generation": "Connect potential customers with solutions.",
         "Data_Analytics": "Visualize performance in accessible dashboards."
+    },
+    "experience": {
+        "marketing_director": {
+            "duration": "March 2022 - July 2022",
+            "description": "Lead the acquisition of 420+ new SaaS customers and $81K+ MRR.",
+            "logo": "/pingplotter-logo.png?monochrome=878787"
+        },
+        "operations_director":  {
+            "duration": "January 2019 - March 2022",
+            "description": "Lead a 12-person company through COVID with 100% retention while growing revenue 40% YOY and increasing headcount.",
+            "logo": "/pingplotter-logo.png?monochrome=878787"
+        },
+        "sales_&_marketing_director":  {
+            "duration": "January 2017 - January 2019",
+            "description": "Grew a first-to-market SaaS product from $5K to $50K+ MRR and successful acquisition.",
+            "logo": "/nopileups-logo.jpg?monochrome=878787"
+        },
+        "marketing_manager":  {
+            "duration": "July 2014 - January 2017",
+            "description": "Generated $100K+ in new revenue with email marketing. Influenced and executed new product and rebranding campaigns.",
+            "logo": "/pmt-logo.png?monochrome=878787"
+        },
+        "campaign_coordinator":  {
+            "duration": "September 2011 - December 2013",
+            "description": "Engaged thousands of prospective students through email and direct mail campaigns",
+            "logo": "/ui-logo.jpg?monochrome=878787"
+        }
+    },
+    "contact": {
+        "phone": "(208) 709-1292",
+        "email": "tedginton88@gmail.com",
+        "location": "Boise, Idaho"
     }
 }
