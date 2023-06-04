@@ -1,0 +1,39 @@
+---
+title: Testimonials
+description: Nice things people wrote to me
+image: https://edgewize.imgix.net/images/testimonial/five-years.jpg?format=auto&w=723&h=371&fit=crop&crop=focalpoint&fp-x=0&fp-y=0.3&fp-z=1.1
+layout: post
+tags:
+    - portfolio
+---
+{% import "macros.njk" as macros %}
+{% macro testimonial(src, quote, attr) %}
+    <div>
+        <div>
+            {{ macros.responsiveImg(site.imgcdn+src, 752, 752, quote, imgix_args="fit=crop&crop=middle")}}
+        </div>
+        <blockquote class="text-xl italic font-semibold text-gray-900 dark:text-white">
+            <p>
+                "{{quote}}""
+            </p>
+        </blockquote>
+        <div>
+            {{attr}}
+        </div>
+    </div>
+{% endmacro %}
+<section class="flex flex-col space-y-4">
+    <div>
+        <blockquote class="text-xl italic font-semibold text-gray-900 dark:text-white">
+            <p>
+                This place is what it is because of you - you’ve become the backbone of Pingman Tools
+            </p>
+        </blockquote>
+        <div>
+            - Gary, employee number one at Pingman Tools
+        </div>
+    </div>
+    {{ testimonial("/testimonial/nate.jpg", "You helped my become a better marketer, a better leader, and a more confident professional", "Nate, on my team for five years")}}
+    {{ testimonial("/testimonial/jan.jpg", "Your willingness to take risks and take Vistage back to Pingman has been inspiring", "Jan, mentor since 2017")}}
+    {{ testimonial("/testimonial/pete.jpg", "You push my to be better and are pushing yourself too", "Pete, Pingman Tools and NoPileups CEO")}}
+</section>
