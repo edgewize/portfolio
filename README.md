@@ -1,1 +1,1 @@
-# Taylor Edginton Portfolio
+# Portfolio | Taylor Edginton

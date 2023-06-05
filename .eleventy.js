@@ -53,8 +53,9 @@ module.exports = function (config) {
     config.addPassthroughCopy('src/robots.txt')
     config.addPassthroughCopy('src/site.webmanifest')
     config.addPassthroughCopy('src/assets/images')
+    config.addPassthroughCopy('src/assets/files/resume.pdf')
     // config.addPassthroughCopy('src/assets/fonts')
-    config.addPassthroughCopy({ 'resume.md/resume.pdf': "files/taylor-edginton-resume.pdf" })
+
 
     // Deep-Merge
     config.setDataDeepMerge(true)
