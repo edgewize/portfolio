@@ -53,7 +53,7 @@ module.exports = function (config) {
     config.addPassthroughCopy('src/robots.txt')
     config.addPassthroughCopy('src/site.webmanifest')
     config.addPassthroughCopy('src/assets/images')
-    config.addPassthroughCopy('src/assets/files/resume.pdf')
+    config.addPassthroughCopy('src/assets/files/taylor-edginton-resume.pdf')
     // config.addPassthroughCopy('src/assets/fonts')
 
 

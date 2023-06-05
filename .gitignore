@@ -3,6 +3,7 @@ dist
 env
 atom-v2.0.0
 resume.md
+server.js
 .env
 .vscode
 .nvmrc
