@@ -47,6 +47,7 @@
         "luxon": "^1.26.0",
         "markdown-it": "^12.0.4",
         "memfs": "^3.2.0",
+        "plotly.js-dist-min": "^2.24.3",
         "postcss-cli": "^9.1.0",
         "sass": "^1.62.1",
         "sass-loader": "^13.3.0",

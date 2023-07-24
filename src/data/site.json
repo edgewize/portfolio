@@ -1,5 +1,9 @@
 {
     "imgcdn": "https://edgewize.imgix.net/images",
+    "api": {
+        "production": "https://edgewize.pythonanywhere.com/",
+        "development":  "http://localhost:7000/"
+    },
     "mccontact": "https://us21.list-manage.com/contact-form?u=386780ea29ed145c2726a5438&form_id=ab45f3aa65dd38077a61bf158db0c9e8",
     "social": {
         "linkedin": "https://www.linkedin.com/in/taylor-edginton-1019a824",

@@ -1,0 +1,19 @@
+---
+layout: base
+permalink: /dashboard/
+---
+
+<section class="container">
+    <h1
+        class="text-center font-header text-4xl mt-6 font-semibold uppercase text-primary sm:text-5xl lg:text-6xl"
+    >
+        Idaho River Surfing
+    </h1>
+    <p
+        class="text-center pt-6 font-header text-xl font-medium text-black sm:text-2xl lg:text-3xl"
+    >
+        River Flow Tracking
+    </p>
+</section>
+<input type="hidden" value="{{ site.api[project.environment] }}" id="apiUrl" />
+<div id="line"></div>

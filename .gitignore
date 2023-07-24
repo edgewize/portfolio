@@ -7,3 +7,5 @@ server.js
 .env
 .vscode
 .nvmrc
+www.portfolio.dev.crt
+www.portfolio.dev.key
