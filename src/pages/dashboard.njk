@@ -12,8 +12,32 @@ permalink: /dashboard/
     <p
         class="text-center pt-6 font-header text-xl font-medium text-black sm:text-2xl lg:text-3xl"
     >
-        River Flow Tracking
+        Boise Whitewater Park
     </p>
 </section>
-<input type="hidden" value="{{ site.api[project.environment] }}" id="apiUrl" />
-<div id="line"></div>
+<section class="container py-16 md:py-20">
+    <div class="flex flex-row space-x-4">
+        <div class="grow rounded overflow-hidden shadow">
+            <img 
+                id="timeline-loader"
+                src="/assets/images/loading.gif"
+                class="mx-auto py-36"
+                height="40px" 
+                width="40px"/>
+            <div id="timeline"></div>
+        </div>
+        <div>
+            <div class="flex flex-row space-x-4">
+                <div class="rounded overflow-hidden shadow">
+                    <div>Change since last week</div>
+                    <div id="week-delta"></div>
+                </div>
+                <div class="rounded overflow-hidden shadow">
+                    <div>Change since last mon</div>
+                    <div id="month-delta"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<input type="hidden" value="{{ site.api[project.environment] }}" id="apiUrl"/>
