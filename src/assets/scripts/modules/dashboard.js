@@ -31,10 +31,7 @@ const calcDelta = (report, interval) => {
     return pct_diff
 }
 
-const api_url = document.getElementById("apiUrl").value;
-if (api_url) {
-    const start_date = new Date()
-    start_date.setDate(start_date.getDate() - 21)
+const updateDashboard = (start_date) => {
     const url_params = new URLSearchParams({start_date: formatDate(start_date)})
     fetch(`${api_url}/report/13206000?` + url_params, {
         method: 'GET'
@@ -42,10 +39,13 @@ if (api_url) {
     .then((response) => response.json())
     .then((report) => {
         const timeline_loader = document.getElementById("timeline-loader")
-        timeline_loader ? timeline_loader.remove() : console.log("No timeline loader")
-        const lineChartData = convertDataForLineChart(JSON.parse(report["timeline"]));
+        timeline_loader ? timeline_loader.remove() : console.log(report)
+        const lineChartData = convertDataForLineChart(JSON.parse(report["timeline"]))
         Plotly.newPlot('timeline', [lineChartData], {
-            title: 'River Flow Timeline',
+            title: {
+                text: 'River Flow Timeline',
+                font: {size: 24, weight: 900}
+            },
             yaxis: {
                 title: 'Cubic Feet Per Second (CFS)'
             }
@@ -54,23 +54,35 @@ if (api_url) {
         intervals.forEach((interval) => {
             const delta = document.getElementById(interval+"-delta")
             if (delta) {
-                delta.innerHTML = calcDelta(report, interval) 
+                delta.innerHTML = calcDelta(report, interval) + "%" 
             }
         })
 
-    })
-    .catch((error) => {
+    }).catch((error) => {
         console.error('Error:', error)
     })
-}    
 
+}
+
+const start_date = new Date()
+start_date.setDate(start_date.getDate() - 21)
+
+const api_url = document.getElementById("apiUrl").value;
+if (api_url) {
+    updateDashboard(start_date)
+}    
 
 // Continually reload page if we have a reload parameter.
 // Reload is the number of MS between reloads. 
-const url_params = new URLSearchParams(location.search);
-const reload = url_params.get('reload');
-if (reload) {
+const continualReload = (reload_ms) => {
     setTimeout(function() {
-        location.reload();
-      }, reload);
+        updateDashboard(start_date)
+        continualReload(reload_ms)        
+    }, reload_ms);
+}
+
+const url_params = new URLSearchParams(location.search);
+const reload_ms = url_params.get('reload');
+if (reload_ms) {
+    continualReload(reload_ms)
 }
