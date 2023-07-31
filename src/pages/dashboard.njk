@@ -13,7 +13,7 @@ permalink: /dashboard/
 </section>
 <section class="container py-16 md:py-20">
     <div class="flex flex-row space-x-4">
-        <div class="grow rounded overflow-hidden shadow">
+        <div class="grow rounded overflow-hidden shadow bg-slate-200">
             <img 
                 id="timeline-loader"
                 src="/assets/images/loading.gif"
@@ -23,12 +23,12 @@ permalink: /dashboard/
             <div id="timeline"></div>
         </div>
         <div>
-            <div class="flex flex-row space-x-4 text-center">
-                <div class="rounded overflow-hidden shadow">
+            <div class="flex lg:flex-row md:flex-col space-x-4 text-center">
+                <div class="rounded overflow-hidden shadow bg-slate-200">
                     <div id="week-delta" class="mt-2 text-3xl text-bold"></div>
                     <div class="mx-4 mb-2">Since last week</div>
                 </div>
-                <div class="rounded overflow-hidden shadow">
+                <div class="rounded overflow-hidden shadow bg-slate-200">
                     <div id="month-delta" class="mt-2 text-3xl text-bold"></div>
                     <div class="mx-4 mb-2">Since last month</div>
                 </div>
@@ -36,4 +36,5 @@ permalink: /dashboard/
         </div>
     </div>
 </section>
-<input type="hidden" value="{{ site.api[project.environment] }}" id="apiUrl"/>
+{# <input type="hidden" value="{{ site.api[project.environment] }}" id="apiUrl"/> #}
+<input type="hidden" value="{{ site.api['production'] }}" id="apiUrl"/>

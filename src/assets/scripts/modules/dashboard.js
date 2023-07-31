@@ -26,8 +26,8 @@ const formatDate = (date) => {
 
 const calcDelta = (report, interval) => {
     const delta = report["delta"][interval]
-    const diff = delta["current"] - delta["previous"]
-    const pct_diff = Math.round((diff / delta["current"]) * 100, 2)
+    const diff = delta["previous"] - delta["current"]
+    const pct_diff = Math.round((diff / delta["previous"]) * 100, 2)
     return pct_diff
 }
 
@@ -54,10 +54,11 @@ const updateDashboard = (start_date) => {
         intervals.forEach((interval) => {
             const delta = document.getElementById(interval+"-delta")
             if (delta) {
-                delta.innerHTML = calcDelta(report, interval) + "%" 
+                const delta_value = calcDelta(report, interval)
+                const pre_symbol = delta_value > 0 ? "+" : ""
+                delta.innerHTML = `${pre_symbol}${delta_value}%` 
             }
         })
-
     }).catch((error) => {
         console.error('Error:', error)
     })
