@@ -50,6 +50,8 @@ const updateDashboard = (start_date) => {
                 title: 'Cubic Feet Per Second (CFS)'
             }
         });
+        document.getElementById("today-date").innerHTML = lineChartData["x"].pop()
+        document.getElementById("current-flow").innerHTML = lineChartData["y"].pop()
         const intervals = ["week", "month"]
         intervals.forEach((interval) => {
             const delta = document.getElementById(interval+"-delta")
