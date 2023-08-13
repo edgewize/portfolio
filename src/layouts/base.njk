@@ -29,6 +29,14 @@
         <link href="{{ '/assets/styles/main.css' | url }}" rel="stylesheet"/>
         {% include "meta.njk" %}
     </head>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-HF3L0PNT2E"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-HF3L0PNT2E');
+    </script>
     <body class="flex flex-col min-h-screen">
         {% iconsprite %}
         <a href="#main" class="hidden">skip to main content</a>
