@@ -52,7 +52,8 @@ const updateDashboard = (start_date) => {
         });
         document.getElementById("today-date").innerHTML = lineChartData["x"].pop()
         document.getElementById("current-flow").innerHTML = lineChartData["y"].pop()
-        const intervals = ["week", "month"]
+        document.getElementById('wavecam').src = "https://edgewize.imgix.net/images/wave/current.png?w=320&h=250&?fp-z=1.5&fit=crop&crop=center";
+        const intervals = ["week", "month"];
         intervals.forEach((interval) => {
             const delta = document.getElementById(interval+"-delta")
             if (delta) {
