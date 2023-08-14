@@ -1,19 +1,17 @@
 ---
 layout: base
+bgcolor: bg-lila
 permalink: /dashboard/
 ---
 
 <section class="container">
-    <h1 class="text-center font-header text-4xl mt-6 font-semibold uppercase text-primary sm:text-5xl lg:text-6xl">
-        Idaho River Surfing
-    </h1>
-    <p class="text-center pt-6 font-header text-xl font-medium text-black sm:text-2xl lg:text-3xl">
+    <h1 class="text-center font-header text-4xl mt-6 font-semibold uppercase sm:text-5xl lg:text-6xl">
         Boise Whitewater Park
-    </p>
+    </h1>
 </section>
 <section class="container py-16 md:py-20">
     <div class="flex flex-row space-x-4">
-        <div class="grow rounded overflow-hidden shadow bg-slate-200">
+        <div class="grow rounded overflow-hidden bg-white shadow">
             <img 
                 id="timeline-loader"
                 src="/assets/images/loading.gif"
@@ -23,7 +21,7 @@ permalink: /dashboard/
             <div id="timeline"></div>
         </div>
         <div class="flex flex-col space-y-4">
-            <div class="rounded overflow-hidden shadow bg-slate-200">
+            <div class="rounded overflow-hidden bg-white shadow">
                 <div class="text-center">
                     <span id="current-flow" class="mt-2 text-6xl font-black text-center"></span>
                     <span>cfs</span>
@@ -31,16 +29,16 @@ permalink: /dashboard/
                 <div id="today-date" class="mx-4 mb-2 text-center"></div>
             </div>            
             <div class="flex lg:flex-row md:flex-col space-x-4 text-center">
-                <div class="rounded overflow-hidden shadow bg-slate-200 grow">
+                <div class="rounded overflow-hidden bg-white shadow grow">
                     <div id="week-delta" class="mt-2 text-3xl font-bold"></div>
                     <div class="mx-4 mb-2">Since last week</div>
                 </div>
-                <div class="rounded overflow-hidden shadow bg-slate-200 grow">
+                <div class="rounded overflow-hidden bg-white shadow grow">
                     <div id="month-delta" class="mt-2 text-3xl font-bold"></div>
                     <div class="mx-4 mb-2">Since last month</div>
                 </div>
             </div>
-            <div class="rounded overflow-hidden shadow bg-slate-200">
+            <div class="rounded overflow-hidden bg-white shadow">
                 <img id="wavecam" src=""/>
             </div>
         </div>

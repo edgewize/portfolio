@@ -43,16 +43,18 @@ const updateDashboard = (start_date) => {
         const lineChartData = convertDataForLineChart(JSON.parse(report["timeline"]))
         Plotly.newPlot('timeline', [lineChartData], {
             title: {
-                text: 'River Flow Timeline',
-                font: {size: 24, weight: 900}
+                text: '<b>River Flow Timeline</b>',
+                font: {size: 28}
             },
             yaxis: {
                 title: 'Cubic Feet Per Second (CFS)'
-            }
+            },
+            // plot_bgcolor:"#e6e5ec",
+            // paper_bgcolor:"#e6e5ec"
         });
         document.getElementById("today-date").innerHTML = lineChartData["x"].pop()
         document.getElementById("current-flow").innerHTML = lineChartData["y"].pop()
-        document.getElementById('wavecam').src = "https://edgewize.imgix.net/images/wave/current.png?w=320&h=250&?fp-z=1.5&fit=crop&crop=center";
+        document.getElementById('wavecam').src = "https://edgewize.imgix.net/images/" + report["screenshot"];
         const intervals = ["week", "month"];
         intervals.forEach((interval) => {
             const delta = document.getElementById(interval+"-delta")

@@ -37,7 +37,7 @@
 
         gtag('config', 'G-HF3L0PNT2E');
     </script>
-    <body class="flex flex-col min-h-screen">
+    <body class="flex flex-col min-h-screen {% if bgcolor %}{{bgcolor}}{% endif %}">
         {% iconsprite %}
         <a href="#main" class="hidden">skip to main content</a>
         <header>{% include "header.njk" %}</header>
