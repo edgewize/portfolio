@@ -54,7 +54,10 @@ const updateDashboard = (start_date) => {
         });
         document.getElementById("today-date").innerHTML = lineChartData["x"].pop()
         document.getElementById("current-flow").innerHTML = lineChartData["y"].pop()
-        document.getElementById('wavecam').src = "https://edgewize.imgix.net/images/" + report["screenshot"];
+        document.getElementById('wavecam').src = "https://edgewize.imgix.net/" + report["screenshot"];
+        document.getElementById('annotated-screenshot').src = "https://edgewize.imgix.net/" + report["detections"]["processed_key"];
+        debugger;
+        document.getElementById("objects-detected").innerHTML = report["detections"]["count"]
         const intervals = ["week", "month"];
         intervals.forEach((interval) => {
             const delta = document.getElementById(interval+"-delta")
