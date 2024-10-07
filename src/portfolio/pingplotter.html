@@ -1,0 +1,73 @@
+---
+title: PingPlotter
+description: "Finding product-market-fit among remote working companies."
+image: https://edgewize.imgix.net/images/pingplotter/tradeshow-collateral.jpg?format=auto&w=723&h=371&fit=crop&crop=focalpoint&fp-x=0&fp-y=.1&fp-z=1
+layout: post
+tags:
+    - portfolio
+---
+<section>
+    <div class="flex flex-col space-y-4">
+        <p class="font-bold mb-3"> {{ description }} </p>
+        <p class="mb-3">Coming soon...</p>
+        <div class="flex flex-col space-y-4">
+            {% import "macros.html" as macros %}
+
+            <div>
+                <div class="shadow">
+                    {{ macros.responsiveImg(site.imgcdn+"/pingplotter/contact-center-lander.png", 752, 350, "Contact
+                    center landing page", imgix_args="&fit=crop&crop=top")}}
+                </div>
+                <p class="text-center italic">
+                    Contact center <a href="https://www.pingplotter.com/contact-center/">landing page</a>
+                </p>
+            </div>
+            <div class="flex flex-row space-x-4">
+                <div>
+                    <div class="shadow">
+                        <a href="https://www.icmi.com/resources/2022/increase-productivity-remote-workers-internet">
+                            {{ macros.responsiveImg(site.imgcdn+"/pingplotter/icmi-content-marketing.png", 376, 376,
+                            "ICMI content marketing", imgix_args="&fit=crop&crop=focalpoint&fp-x=0.4&fp-y=0&fp=z=0")}}
+                        </a>
+                    </div>
+                    <p class="text-center italic">
+                        ICMI <a
+                            href="https://www.icmi.com/resources/2022/increase-productivity-remote-workers-internet">
+                            content marketing</a>
+                    </p>
+                </div>
+                <div>
+                    <div class="shadow">
+                        <a
+                            href="https://www.customercontactweekdigital.com/tools-technologies/articles/product-review-pingplotter-addresses-remote-agent-connection-woes-yielding-a-higher-quality-cx">
+                            {{ macros.responsiveImg(site.imgcdn+"/pingplotter/ccw-content-marketing.png", 376, 376, "CCW
+                            content marketing", imgix_args="&fit=crop&crop=focalpoint&fp-x=0.4&fp-y=0&fp=z=0")}}
+                        </a>
+                    </div>
+                    <p class="text-center italic">
+                        CCW <a
+                            href="https://www.customercontactweekdigital.com/tools-technologies/articles/product-review-pingplotter-addresses-remote-agent-connection-woes-yielding-a-higher-quality-cx">
+                            content marketing</a>
+                    </p>
+                </div>
+            </div>
+            <div>
+                <div class="shadow">
+                    {{ macros.responsiveImg(site.imgcdn+"/pingplotter/taylor-tradeshow.jpg", 752, 350, "Taylor working
+                    booth", imgix_args="&fit=crop&crop=mmiddle")}}
+                </div>
+                <p class="text-center italic">
+                    Working the booth
+                </p>
+            </div>
+            <div>
+                <div class="shadow">
+                    {{ macros.responsiveImg(site.imgcdn+"/pingplotter/tradeshow-collateral.jpg", 752, 350, "Tradeshow
+                    collateral", imgix_args="&fit=crop&crop=mmiddle")}}
+                </div>
+                <p class="text-center italic">
+                    Tradeshow collateral
+                </p>
+            </div>
+
+</section>

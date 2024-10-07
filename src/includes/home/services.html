@@ -1,0 +1,25 @@
+<section class="container py-20" id="services">
+    <div class="pb-10 container lg:max-w-4xl text-center">
+        <h2 class="pb-6 font-header text-4xl font-semibold uppercase text-primary sm:text-5xl lg:text-6xl">Services</h2>
+        <p class="body-font">With more than a decade of experience, I can enhance your marketing with strategic and tactical contributions. Depending on your needs, services are available as a package or al-a-carte.</p>
+    </div>
+    <div class="grid grid-cols-1 gap-6 sm:grid-cols-2 md:gap-10 lg:grid-cols-3">
+        {% for service, desc in site.services %}
+        {% set name = service | replace('_', '-') | lower %}
+        <div class="group rounded px-8 py-12 shadow">
+            <div class="mx-auto h-24 w-24 text-center xl:h-28 xl:w-28">
+                <div class="block">
+                    <img src="/assets/images/icons/{{ name }}.svg" alt="{{ name }} icon" />
+                </div>
+            </div>
+            <div class="text-center">
+                <h3 class="pt-8 text-lg font-semibold uppercase text-primary lg:text-xl"> {{ service | replace("_", " ")
+                    | upper }} </h3>
+                <p class="text-grey pt-4 text-sm md:text-base">
+                    {{ desc }}
+                </p>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</section>

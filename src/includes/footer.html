@@ -1,0 +1,11 @@
+<div class="container flex flex-col justify-between sm:flex-row py-6
+">
+  <p class="text-center font-body text-white md:text-left"> © Taylor Edginton </p>
+  <div class="flex items-center justify-center pt-5 sm:justify-start sm:pt-0">
+    {% for platform, url in site.social %}
+      <a href="{{ url }}">
+        <i class="bx bxl-{{ platform }}{% if platform in ['linkedin', 'facebook'] %}-square{% endif %} {% if not loop.first %}pl-4{% endif %} text-2xl text-white hover:text-yellow" ></i>
+      </a>
+    {% endfor %}
+  </div>
+</div>

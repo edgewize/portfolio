@@ -46,9 +46,9 @@ module.exports = function (config) {
     )
 
     // Layouts
-    config.addLayoutAlias('base', 'base.njk')
-    config.addLayoutAlias('post', 'post.njk')
-
+    config.addLayoutAlias('base', 'base.html')
+    config.addLayoutAlias('post', 'post.html')
+ 
     // Pass-through files
     config.addPassthroughCopy('src/robots.txt')
     config.addPassthroughCopy('src/site.webmanifest')
@@ -69,7 +69,7 @@ module.exports = function (config) {
             layouts: 'layouts',
             data: 'data'
         },
-        templateFormats: ['njk', 'md', '11ty.js'],
+        templateFormats: ['njk', 'md', 'html'],
         htmlTemplateEngine: 'njk',
         markdownTemplateEngine: 'njk'
     }

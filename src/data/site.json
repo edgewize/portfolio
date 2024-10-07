@@ -1,6 +1,5 @@
 {
-    "imgcdn": "https://edgewize.imgix.net/images",
-    "api": {
+    "imgcdn": "https://edgewize.imgix.net/images", "api": {
         "production": "https://edgewize.pythonanywhere.com/",
         "development":  "http://localhost:7000/"
     },
@@ -11,43 +10,35 @@
         "github": "https://github.com/edgewize/portfolio"
     },
     "skills": {
-        "6": "Leading Teams",
-        "12": "Marketing Products",
-        "9": "Developing Websites",
-        "7": "Managing Projects"
+        "6": "Brand strategy",
+        "8": "Product marketing",
+        "12": "Marketing automation",
+        "9": "Lead generation"
     },
     "services": {
-        "Coaching": "Help individuals find the magic inside themselves",
-        "Product-Market-Fit": "Validate demand for new products and services.",
-        "Web_Development": "Create websites with HTML, CSS, JS, PHP|Python.",
-        "Culture": "Help teams thrive while doing their best work.",
-        "Lead_Generation": "Connect potential customers with solutions.",
-        "Data_Analytics": "Visualize performance in accessible dashboards."
+        "Marketing_Audit": "See an outsider perspective on your marketing and identify new oportunities.",
+        "Product_Strategy": "Establish product-market-fit and build plans for acquiring new customers.",
+        "Development": "Create and update the systems required for success: website, CRM, analytics, etc."
     },
     "experience": {
         "marketing_director": {
-            "duration": "March 2022 - July 2023",
-            "description": "Scaled <a href='https://www.pingplotter.com/cloud/' target='_blank'>PingPlotter Cloud</a> with digital campaigns, tradeshows, & conversion optimization.",
-            "logo": "/pingplotter-logo.png?monochrome=878787"
-        },
-        "operations_director":  {
-            "duration": "January 2019 - March 2022",
-            "description": "Enhanced culture with <a href='https://www.eosworldwide.com/what-is-eos' target='_blank'>EOS</a> and <a href='https://weberconsultinggroup.net/what-is-conversational-capacity-and-why-does-it-matter/' target='_blank'>conversational capacity</a>. Navigated COVID while growing revenue and adding headcount.",
+            "duration": "January 2019 - July 2023",
+            "description": "Established sales traction in legal IT and call center markets.",
             "logo": "/pingplotter-logo.png?monochrome=878787"
         },
         "sales_&_marketing_director":  {
             "duration": "January 2017 - January 2019",
-            "description": "Scaled <a href='https://drb.com/tunnel_solutions/tunnel_management/nopileups_full_tunnel_optimization' target='_blank'>NoPileups</a> to acquisition with direct marketing, media campaigns, and tradeshows.",
+            "description": "Scaled first-to-market product in the car wash industry.",
             "logo": "/nopileups-logo.jpg?monochrome=878787"
         },
         "marketing_manager":  {
             "duration": "July 2014 - January 2017",
-            "description": "Reinvigorated a stale brand with website enhancements, email marketing, and rebranding campaigns.",
+            "description": "Rebranded company and released new products.",
             "logo": "/pmt-logo.png?monochrome=878787"
         },
         "campaign_coordinator":  {
             "duration": "September 2011 - December 2013",
-            "description": "Engaged thousands of prospective students through email and direct mail campaigns.",
+            "description": "Engaged prospective students with personalized advertising.",
             "logo": "/ui-logo.jpg?monochrome=878787"
         }
     },

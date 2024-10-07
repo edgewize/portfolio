@@ -27,7 +27,7 @@
 />
 
         <link href="{{ '/assets/styles/main.css' | url }}" rel="stylesheet"/>
-        {% include "meta.njk" %}
+        {% include "meta.html" %}
     </head>
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-HF3L0PNT2E"></script>
     <script>
@@ -40,14 +40,14 @@
     <body class="flex flex-col min-h-screen {% if bgcolor %}{{bgcolor}}{% endif %}">
         {% iconsprite %}
         <a href="#main" class="hidden">skip to main content</a>
-        <header>{% include "header.njk" %}</header>
+        <header>{% include "header.html" %}</header>
 
         <main id="main" class="flex-grow" tabindex="-1">
             {{ content | safe }}
         </main>
 
-        <footer class="bg-primary w-full text-white mt-8">
-            {% include "footer.njk" %}
+        <footer class="bg-primary w-full text-white">
+            {% include "footer.html" %}
         </footer>
 
         <script
